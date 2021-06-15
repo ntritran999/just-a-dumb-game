@@ -6,9 +6,9 @@ class Game:
     white = (255, 255, 255)
     black = (0,0,0)
 
-    def __init__(self, width, height):
+    def __init__(self, resolution):
         pygame.init()
-        self.sw, self.sh = width, height
+        self.sw, self.sh = resolution[0], resolution[1]
         self.scr = pygame.display.set_mode((self.sw, self.sh))
         self.clock = pygame.time.Clock()
     
@@ -21,7 +21,7 @@ class Game:
         self.draw_text(txt, 20, x+w//2-15, y+h//2-10)
 
     def main_menu(self):
-        button_x, button_y, button_w, button_h = 330, 200, 140, 40
+        button_x, button_y, button_w, button_h = 25, 80, 140, 40
         while True:
             self.scr.fill(self.black)
             self.draw_text('Main Menu', 40, 20, 20)
@@ -103,5 +103,6 @@ class Game:
         self.main_menu()
                     
 if __name__ == "__main__":
-    game = Game(800, 600)
+    resolution = (800, 600) # Feel free to change the resolution but be careful!.
+    game = Game(resolution) 
     game.run()
