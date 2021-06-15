@@ -103,6 +103,6 @@ class Game:
         self.main_menu()
                     
 if __name__ == "__main__":
-    resolution = (800, 600) # Feel free to change the resolution but be careful!.
+    resolution = (800, 600) # Feel free to change the resolution but be careful!. I recommend using your max resolution.
     game = Game(resolution) 
     game.run()
